@@ -14,3 +14,5 @@ security:
 logging:
   level:
     org.springframework.security: DEBUG
+OAuth2ClientId: my-client-with-secret
+OAuth2ClientSecret: secret

@@ -42,8 +42,8 @@ public class AuthorizationServer {
 					.withClient("my-client-with-registered-redirect").authorizedGrantTypes("authorization_code")
 					.authorities("ROLE_CLIENT").scopes("read", "trust").resourceIds("oauth2-resource")
 					.redirectUris("http://anywhere?key=value").and().withClient("my-client-with-secret")
-					.authorizedGrantTypes("client_credentials", "password").authorities("ROLE_CLIENT").scopes("read")
-					.resourceIds("oauth2-resource").secret("secret");
+					.authorizedGrantTypes("client_credentials", "password").authorities("ROLE_CLIENT")
+					.scopes("read", "write", "trust").resourceIds("oauth2-resource").secret("secret");
 			// @formatter:on
 		}
 	}
